@@ -1,0 +1,100 @@
+/* public/css/custom-adminlte.css */
+
+/* Mejoras generales */
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: #3c8dbc;
+    box-shadow: 0 0 8px rgba(60, 141, 188, 0.6);
+}
+
+.brand-link {
+    border-bottom: 1px solid #4b646f;
+}
+
+/* Mejoras en las tarjetas */
+.card {
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    border: none;
+    border-radius: 5px;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0,0,0,.075);
+}
+
+/* Botones mejorados */
+.btn {
+    border-radius: 4px;
+}
+
+/* Mejoras en la barra de usuario */
+.user-panel {
+    border-bottom: 1px solid #4b646f;
+}
+
+.user-panel .info {
+    padding: 10px 5px;
+}
+
+/* Mejoras en las tablas */
+.table {
+    border-radius: 5px;
+}
+
+.table thead th {
+    border-top: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Efectos hover en el menú */
+.nav-sidebar .nav-item > .nav-link {
+    transition: all 0.3s;
+}
+
+.nav-sidebar .nav-item > .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+/* Mejoras en formularios */
+.form-control {
+    border-radius: 4px;
+}
+
+.input-group-text {
+    border-radius: 4px;
+}
+
+/* Mejoras en los badges */
+.badge {
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Mejoras en el preloader */
+.preloader {
+    background: #222d32;
+}
+
+/* Mejoras en el modo oscuro */
+.dark-mode .content-wrapper {
+    background-color: #1a2226;
+}
+
+.dark-mode .card {
+    background-color: #222d32;
+    color: #fff;
+}
+
+.dark-mode .table {
+    background-color: #222d32;
+    color: #fff;
+}
+
+.dark-mode .table th,
+.dark-mode .table td {
+    border-color: #2c3b41;
+}
