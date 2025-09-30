@@ -5,3 +5,124 @@
 [x-cloak] {
     display: none;
 }
+
+/* Colores personalizados para pizzería */
+:root {
+    --pizza-red: #e74c3c;
+    --pizza-orange: #e67e22;
+    --pizza-yellow: #f1c40f;
+    --pizza-tomato: #c0392b;
+    --pizza-cheese: #f39c12;
+    --pizza-olive: #27ae60;
+    --pizza-basil: #16a085;
+}
+
+/* Gradientes personalizados */
+.bg-gradient-pizza {
+    background: linear-gradient(135deg, var(--pizza-red) 0%, var(--pizza-orange) 100%) !important;
+}
+
+.bg-gradient-auth {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.sidebar-dark-pizza {
+    background-color: #2c3e50 !important;
+}
+
+.card-pizza {
+    border-top: 3px solid var(--pizza-red) !important;
+}
+
+/* Colores de texto personalizados */
+.text-pizza {
+    color: var(--pizza-red) !important;
+}
+
+/* Icon colors personalizados para pizzería */
+.text-tomato {
+    color: var(--pizza-tomato) !important;
+}
+
+.text-cheese {
+    color: var(--pizza-cheese) !important;
+}
+
+.text-olive {
+    color: var(--pizza-olive) !important;
+}
+
+.text-basil {
+    color: var(--pizza-basil) !important;
+}
+
+/* Badges personalizados */
+.badge-pizza {
+    background-color: var(--pizza-red);
+    color: white;
+}
+
+/* Botones personalizados */
+.btn-pizza {
+    background: linear-gradient(135deg, var(--pizza-red) 0%, var(--pizza-orange) 100%);
+    border: none;
+    color: white;
+}
+
+.btn-pizza:hover {
+    background: linear-gradient(135deg, var(--pizza-tomato) 0%, var(--pizza-cheese) 100%);
+    color: white;
+}
+
+/* Navbar personalizado */
+.navbar-pizza {
+    background: linear-gradient(135deg, var(--pizza-red) 0%, var(--pizza-orange) 100%) !important;
+}
+
+/* Sidebar personalizado */
+.sidebar-pizza .nav-sidebar .nav-item > .nav-link {
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sidebar-pizza .nav-sidebar .nav-item > .nav-link.active {
+    border-left-color: var(--pizza-red);
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.sidebar-pizza .nav-sidebar .nav-item > .nav-link:hover {
+    background-color: rgba(231, 76, 60, 0.05);
+    border-left-color: var(--pizza-orange);
+}
+
+/* Custom styles for pizza theme */
+.accent-pizza {
+    accent-color: var(--pizza-red);
+}
+
+.border-pizza {
+    border-color: var(--pizza-red) !important;
+}
+
+/* Custom card styles */
+.card-header-pizza {
+    background: linear-gradient(135deg, var(--pizza-red) 0%, var(--pizza-orange) 100%) !important;
+    color: white !important;
+}
+
+/* Table custom styles */
+.table-pizza thead th {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-bottom: 2px solid var(--pizza-red);
+}
+
+/* Progress bar pizza style */
+.progress-bar-pizza {
+    background: linear-gradient(135deg, var(--pizza-red) 0%, var(--pizza-orange) 100%);
+}
+
+/* Custom alert styles */
+.alert-pizza {
+    border-left: 4px solid var(--pizza-red);
+    background-color: rgba(231, 76, 60, 0.05);
+}

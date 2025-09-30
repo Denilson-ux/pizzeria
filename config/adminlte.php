@@ -2,9 +2,9 @@
 
 return [
 
-    'title' => 'AdminPanel Pro',
+    'title' => 'PizzaMaster Pro',
     'title_prefix' => '',
-    'title_postfix' => ' | Sistema Administrativo',
+    'title_postfix' => ' | Sistema de Pizzería',
 
     'use_ico_only' => true,
     'use_full_favicon' => false,
@@ -13,18 +13,18 @@ return [
         'allowed' => true,
     ],
 
-    'logo' => '<b>Admin</b>PANEL',
+    'logo' => '<b>Pizza</b>MASTER',
     'logo_img' => '/vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminPanel Logo',
+    'logo_img_alt' => 'PizzaMaster Logo',
 
     'auth_logo' => [
         'enabled' => true,
         'img' => [
             'path' => '/vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'Auth Logo',
+            'alt' => 'PizzaMaster Auth Logo',
             'class' => '',
             'width' => 60,
             'height' => 60,
@@ -36,7 +36,7 @@ return [
         'mode' => 'fullscreen',
         'img' => [
             'path' => '/vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'AdminPanel Preloader Image',
+            'alt' => 'PizzaMaster Preloader Image',
             'effect' => 'animation__fadeIn',
             'width' => 60,
             'height' => 60,
@@ -45,10 +45,10 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => true,
-    'usermenu_header_class' => 'bg-gradient-dark',
+    'usermenu_header_class' => 'bg-gradient-pizza',
     'usermenu_image' => true,
     'usermenu_desc' => true,
-    'usermenu_profile_url' => true, // Esto ahora funcionará con los métodos agregados al modelo User
+    'usermenu_profile_url' => true,
 
     'layout_topnav' => null,
     'layout_boxed' => null,
@@ -57,22 +57,22 @@ return [
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
-    'classes_auth_card' => 'card-outline card-primary bg-gradient-dark',
+    'classes_auth_card' => 'card-outline card-pizza bg-gradient-auth',
     'classes_auth_header' => 'text-center',
     'classes_auth_body' => 'text-center',
     'classes_auth_footer' => 'text-center',
     'classes_auth_icon' => 'fa-lg text-light',
     'classes_auth_btn' => 'btn-flat btn-light',
 
-    'classes_body' => 'accent-primary',
-    'classes_brand' => 'bg-gradient-dark',
+    'classes_body' => 'accent-pizza',
+    'classes_brand' => 'bg-gradient-pizza',
     'classes_brand_text' => 'text-light',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-pizza elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light bg-gradient-dark',
+    'classes_topnav' => 'navbar-white navbar-light bg-gradient-pizza',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -87,7 +87,7 @@ return [
     'sidebar_nav_animation_speed' => 300,
 
     'right_sidebar' => true,
-    'right_sidebar_icon' => 'fas fa-cogs',
+    'right_sidebar_icon' => 'fas fa-pizza-slice',
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
@@ -101,7 +101,7 @@ return [
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false, // Desactivado porque usamos el método en el modelo
+    'profile_url' => false,
     'disable_darkmode_routes' => false,
 
     'laravel_asset_bundling' => false,
@@ -111,7 +111,7 @@ return [
     'menu' => [
         [
             'type' => 'navbar-search',
-            'text' => 'Buscar...',
+            'text' => 'Buscar pedidos, clientes...',
             'topnav_right' => true,
             'icon' => 'fas fa-search',
         ],
@@ -129,37 +129,50 @@ return [
             'text' => 'Dashboard',
             'url' => 'home',
             'icon' => 'fas fa-tachometer-alt',
-            'icon_color' => 'cyan',
+            'icon_color' => 'orange',
             'label_color' => 'success',
         ],
         [
             'text' => 'Estadísticas',
             'url' => 'stats',
-            'icon' => 'fas fa-chart-line',
-            'icon_color' => 'info',
+            'icon' => 'fas fa-chart-pie',
+            'icon_color' => 'tomato',
         ],
-        ['header' => 'GESTIÓN PRINCIPAL', 'classes' => 'text-uppercase text-teal'],
+        
+        ['header' => 'GESTIÓN DE PEDIDOS', 'classes' => 'text-uppercase text-pizza'],
         [
-            'text' => 'Usuarios',
-            'url' => 'admin/users',
-            'icon' => 'fas fa-users',
-            'icon_color' => 'indigo',
-            'label' => 'Nuevo',
-            'label_color' => 'success',
-        ],
-        [
-            'text' => 'Productos',
-            'url' => 'admin/products',
-            'icon' => 'fas fa-box',
-            'icon_color' => 'orange',
-        ],
-        [
-            'text' => 'Pedidos',
+            'text' => 'Pedidos Activos',
             'url' => 'admin/orders',
             'icon' => 'fas fa-shopping-cart',
-            'icon_color' => 'purple',
+            'icon_color' => 'success',
             'label' => 12,
-            'label_color' => 'warning',
+            'label_color' => 'danger',
+        ],
+        [
+            'text' => 'Historial Pedidos',
+            'url' => 'admin/orders-history',
+            'icon' => 'fas fa-history',
+            'icon_color' => 'info',
+        ],
+        [
+            'text' => 'Clientes',
+            'url' => 'admin/clients',
+            'icon' => 'fas fa-users',
+            'icon_color' => 'warning',
+        ],
+
+        ['header' => 'INVENTARIO Y MENÚ', 'classes' => 'text-uppercase text-pizza'],
+        [
+            'text' => 'Menú de Pizzas',
+            'url' => 'admin/products',
+            'icon' => 'fas fa-pizza-slice',
+            'icon_color' => 'danger',
+        ],
+        [
+            'text' => 'Ingredientes',
+            'url' => 'admin/ingredients',
+            'icon' => 'fas fa-cheese',
+            'icon_color' => 'yellow',
         ],
         [
             'text' => 'Categorías',
@@ -167,12 +180,39 @@ return [
             'icon' => 'fas fa-tags',
             'icon_color' => 'green',
         ],
-        ['header' => 'CONFIGURACIÓN', 'classes' => 'text-uppercase text-teal'],
         [
-            'text' => 'Perfil',
-            'url' => 'admin/profile',
+            'text' => 'Promociones',
+            'url' => 'admin/promotions',
+            'icon' => 'fas fa-percent',
+            'icon_color' => 'pink',
+        ],
+
+        ['header' => 'LOGÍSTICA Y ENTREGAS', 'classes' => 'text-uppercase text-pizza'],
+        [
+            'text' => 'Tipos de Vehículos',
+            'url' => 'tipovehiculos',
+            'icon' => 'fas fa-motorcycle',
+            'icon_color' => 'info',
+        ],
+        [
+            'text' => 'Ubicaciones',
+            'url' => '/ubicaciones',
+            'icon' => 'fas fa-map-marker-alt',
+            'icon_color' => 'success',
+        ],
+        [
+            'text' => 'Repartidores',
+            'url' => 'admin/delivery',
+            'icon' => 'fas fa-user-clock',
+            'icon_color' => 'primary',
+        ],
+
+        ['header' => 'CONFIGURACIÓN', 'classes' => 'text-uppercase text-pizza'],
+        [
+            'text' => 'Usuarios',
+            'url' => 'admin/users',
             'icon' => 'fas fa-user-cog',
-            'icon_color' => 'blue',
+            'icon_color' => 'indigo',
         ],
         [
             'text' => 'Configuración',
@@ -186,28 +226,35 @@ return [
             'icon' => 'fas fa-headset',
             'icon_color' => 'teal',
         ],
-        ['header' => 'INFORMES', 'classes' => 'text-uppercase text-teal'],
+        
+        ['header' => 'INFORMES Y REPORTES', 'classes' => 'text-uppercase text-pizza'],
         [
             'text' => 'Reportes',
-            'icon' => 'fas fa-chart-pie',
-            'icon_color' => 'pink',
+            'icon' => 'fas fa-chart-bar',
+            'icon_color' => 'purple',
             'submenu' => [
                 [
-                    'text' => 'Ventas',
+                    'text' => 'Ventas Diarias',
                     'url' => 'reports/sales',
                     'icon' => 'fas fa-money-bill-wave',
                     'icon_color' => 'success',
                 ],
                 [
-                    'text' => 'Clientes',
-                    'url' => 'reports/clients',
-                    'icon' => 'fas fa-user-friends',
+                    'text' => 'Pedidos por Repartidor',
+                    'url' => 'reports/delivery',
+                    'icon' => 'fas fa-motorcycle',
                     'icon_color' => 'info',
                 ],
                 [
-                    'text' => 'Inventario',
-                    'url' => 'reports/inventory',
-                    'icon' => 'fas fa-warehouse',
+                    'text' => 'Productos Más Vendidos',
+                    'url' => 'reports/products',
+                    'icon' => 'fas fa-pizza-slice',
+                    'icon_color' => 'danger',
+                ],
+                [
+                    'text' => 'Clientes Frecuentes',
+                    'url' => 'reports/clients',
+                    'icon' => 'fas fa-user-friends',
                     'icon_color' => 'warning',
                 ],
             ],
@@ -304,7 +351,7 @@ return [
                 [
                     'type' => 'css',
                     'asset' => true,
-                    'location' => 'vendor/pace-progress/themes/blue/pace-theme-center-radar.min.css',
+                    'location' => 'vendor/pace-progress/themes/orange/pace-theme-center-radar.min.css',
                 ],
                 [
                     'type' => 'js',

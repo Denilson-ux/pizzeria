@@ -4,7 +4,7 @@
             
             <div class="flex flex-col items-center mb-8">
                 <div class="h-28 w-28 mb-3">
-                    <img src="{{ asset('images/login.png') }}" alt="Pizza Logo" class="h-full w-full object-cover rounded-full border-4 border-orange-400 shadow-md">
+                    <img src="{{ asset('images/login.png') }}" alt="Pizza Logo" class="h-28 w-28 object-cover rounded-full border-4 border-orange-400 shadow-md">
                 </div>
                 <h2 class="text-3xl font-extrabold text-orange-600 dark:text-orange-400 tracking-tight">
                     Bienvenido de vuelta
