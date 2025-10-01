@@ -2,7 +2,7 @@
 
 return [
 
-    'title' => 'PizzaMaster Pro',
+    'title' => 'PizzaBambino Pro',
     'title_prefix' => '',
     'title_postfix' => ' | Sistema de Pizzería',
 
@@ -13,18 +13,18 @@ return [
         'allowed' => true,
     ],
 
-    'logo' => '<b>Pizza</b>MASTER',
-    'logo_img' => '/vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Pizza</b>Bambino',
+    'logo_img' => '/images/login.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
-    'logo_img_xl' => null,
+    'logo_img_xl' => '/images/login.png',
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'PizzaMaster Logo',
+    'logo_img_alt' => 'PizzaBambino Logo',
 
     'auth_logo' => [
         'enabled' => true,
         'img' => [
-            'path' => '/vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'PizzaMaster Auth Logo',
+            'path' => '/images/login.png',
+            'alt' => 'PizzaBambino Auth Logo',
             'class' => '',
             'width' => 60,
             'height' => 60,
@@ -35,7 +35,7 @@ return [
         'enabled' => true,
         'mode' => 'fullscreen',
         'img' => [
-            'path' => '/vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => '/images/login.png',
             'alt' => 'PizzaMaster Preloader Image',
             'effect' => 'animation__fadeIn',
             'width' => 60,
@@ -127,7 +127,7 @@ return [
         // Sidebar items:
         [
             'text' => 'Dashboard',
-            'url' => 'home',
+            'url' => 'dashboard',
             'icon' => 'fas fa-tachometer-alt',
             'icon_color' => 'orange',
             'label_color' => 'success',
@@ -156,7 +156,7 @@ return [
         ],
         [
             'text' => 'Clientes',
-            'url' => 'admin/clients',
+            'url' => 'cliente',
             'icon' => 'fas fa-users',
             'icon_color' => 'warning',
         ],
@@ -188,6 +188,12 @@ return [
         ],
 
         ['header' => 'LOGÍSTICA Y ENTREGAS', 'classes' => 'text-uppercase text-pizza'],
+                [
+            'text' => 'Vehículos',
+            'url' => 'vehiculos',
+            'icon' => 'fas fa-car',
+            'icon_color' => 'primary',
+        ],
         [
             'text' => 'Tipos de Vehículos',
             'url' => 'tipovehiculos',
@@ -202,7 +208,7 @@ return [
         ],
         [
             'text' => 'Repartidores',
-            'url' => 'admin/delivery',
+            'url' => 'repartidor',
             'icon' => 'fas fa-user-clock',
             'icon_color' => 'primary',
         ],

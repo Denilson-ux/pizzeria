@@ -135,43 +135,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Estadísticas de uso (puedes personalizar según tu lógica) -->
-            <div class="card shadow-sm border-0 mt-4">
-                <div class="card-header bg-light">
-                    <h6 class="card-title mb-0">
-                        <i class="fas fa-chart-bar mr-2"></i>Información Adicional
-                    </h6>
-                </div>
-                <div class="card-body">
-                    <div class="row text-center">
-                        <div class="col-md-3 mb-3">
-                            <div class="stat-card">
-                                <div class="stat-number text-primary">0</div>
-                                <div class="stat-label">Vehiculos Activos</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <div class="stat-card">
-                                <div class="stat-number text-info">0</div>
-                                <div class="stat-label">Pedidos Hoy</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <div class="stat-card">
-                                <div class="stat-number text-success">0</div>
-                                <div class="stat-label">Entregados</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <div class="stat-card">
-                                <div class="stat-number text-warning">0</div>
-                                <div class="stat-label">En Curso</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 @stop

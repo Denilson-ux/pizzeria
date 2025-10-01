@@ -1,54 +1,58 @@
 @extends('adminlte::page')
 
-@section('title', 'Tipos de Vehículos')
+@section('title', 'Repartidores')
 
 @section('content_header')
-    <h1>Lista de Tipos de Vehículos</h1>
+    <h1>Lista de Repartidores</h1>
 @stop
 
 @section('content')
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('tipovehiculos.create') }}" class="btn btn-primary">
-                <i class="fas fa-plus"></i> Nuevo Tipo de Vehículo
+            <a href="{{ route('repartidor.create') }}" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Nuevo Repartidor
             </a>
         </div>
         <div class="card-body">
-            <table class="table table-striped table-bordered" id="tipovehiculos-table">
+            <table class="table table-striped table-bordered" id="repartidores-table">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Estado</th>
+                        <th>Imagen</th>
+                        <th>Nombre Completo</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>N° Licencia</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($tipos as $tipo)
+                    @foreach($repartidores as $repartidor)
                     <tr>
-                        <td>{{ $tipo->id }}</td>
-                        <td>{{ $tipo->nombre }}</td>
-                        <td>{{ $tipo->descripcion ?? 'Sin descripción' }}</td>
+                        <td>{{ $repartidor->id }}</td>
                         <td>
-                            @if($tipo->estado)
-                                <span class="badge badge-success">Activo</span>
+                            @if($repartidor->imagen)
+                                <img src="{{ asset('storage/' . $repartidor->imagen) }}" alt="Imagen" class="img-circle" width="40" height="40">
                             @else
-                                <span class="badge badge-danger">Inactivo</span>
+                                <img src="{{ asset('img/user-default.png') }}" alt="Sin imagen" class="img-circle" width="40" height="40">
                             @endif
                         </td>
+                        <td>{{ $repartidor->nombre }} {{ $repartidor->paterno }} {{ $repartidor->materno }}</td>
+                        <td>{{ $repartidor->telefono }}</td>
+                        <td>{{ $repartidor->correo }}</td>
+                        <td>{{ $repartidor->numero_licencia }}</td>
                         <td>
                             <div class="btn-group">
-                                <a href="{{ route('tipovehiculos.show', $tipo) }}" class="btn btn-info btn-sm">
+                                <a href="{{ route('repartidor.show', $repartidor) }}" class="btn btn-info btn-sm">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <a href="{{ route('tipovehiculos.edit', $tipo) }}" class="btn btn-warning btn-sm">
+                                <a href="{{ route('repartidor.edit', $repartidor) }}" class="btn btn-warning btn-sm">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="{{ route('tipovehiculos.destroy', $tipo) }}" method="POST" class="d-inline">
+                                <form action="{{ route('repartidor.destroy', $repartidor) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este tipo de vehículo?')">
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este repartidor?')">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </form>
@@ -71,7 +75,7 @@
     <script src="{{ asset('vendor/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('#tipovehiculos-table').DataTable({
+            $('#repartidores-table').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
                 }

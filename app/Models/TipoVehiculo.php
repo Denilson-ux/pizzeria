@@ -18,4 +18,9 @@ class TipoVehiculo extends Model
         'descripcion',
         'estado',
     ];
+
+    public function vehiculos()
+    {
+    return $this->hasMany(Vehiculo::class, 'tipo_vehiculo_id');
+    }
 }
